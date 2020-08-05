@@ -1,0 +1,71 @@
+<div class="tile is-ancestor">
+	<div class="tile is-parent is-2">
+		<section class="tile is-child box color-group_controls">
+			<cp-color-gradient
+				(colorChange)="colorChange($event)"
+			></cp-color-gradient>
+
+			<mat-label>Hue</mat-label>
+
+			<mat-slider
+				min="0"
+				max="40"
+				step="0.5"
+				value="20"
+				(input)="hueChange($event)"
+			>
+			</mat-slider>
+
+			<mat-label>Saturation</mat-label>
+
+			<mat-slider
+				min="0"
+				max="16"
+				step="0.5"
+				value="8"
+				(input)="saturationChange($event)"
+			></mat-slider>
+
+			<mat-label>Brightness</mat-label>
+
+			<mat-slider
+				min="0"
+				max="10"
+				step="0.5"
+				value="5"
+				(input)="luminChange($event)"
+			></mat-slider>
+		</section>
+	</div>
+	<div class="tile is-parent is-4">
+		<section class="tile is-child box">
+			<div class="color-group_palette">
+				<cp-color-row [colors]="lightColors"></cp-color-row>
+				<cp-color-row [colors]="colors"></cp-color-row>
+				<cp-color-row [colors]="contrastColors"></cp-color-row>
+			</div>
+		</section>
+	</div>
+	<div class="tile is-parent is-6">
+		<section class="tile is-child box">
+			<cp-color-palette
+				[lightColors]="lightColors"
+				[colors]="colors"
+				[contrastColors]="contrastColors"
+				(changePalette)="changePalette($event)"
+			></cp-color-palette>
+		</section>
+	</div>
+</div>
+
+<div class="tile is-ancestor">
+	<div class="tile is-parent is-6">
+		<div class="tile is-child box">
+			<cp-page-demo [palette]="palette"></cp-page-demo>
+		</div>
+	</div>
+
+	<div class="tile is-parent is-6">
+		<div class="tile is-child box"></div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<div class="color-palette_container">
+	<div
+		*ngFor="let p of palettes"
+		class="color-palette"
+		[class.color-palette__selected]="p.id === selectedPalette"
+		(click)="selectPalette(p)"
+	>
+		<div
+			class="color-palette_box"
+			[style.backgroundColor]="rgbaColor(p.neutrals[0])"
+		></div>
+		<div
+			class="color-palette_box"
+			[style.backgroundColor]="rgbaColor(p.neutrals[1])"
+		></div>
+		<div
+			class="color-palette_box"
+			[style.backgroundColor]="rgbaColor(p.primary)"
+		></div>
+		<div
+			class="color-palette_box"
+			[style.backgroundColor]="rgbaColor(p.secondary)"
+		></div>
+		<div
+			class="color-palette_box"
+			[style.backgroundColor]="rgbaColor(p.accent)"
+		></div>
+	</div>
+</div>

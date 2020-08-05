@@ -1,0 +1,26 @@
+.color-palette_container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	height: 100%;
+	align-content: space-around;
+}
+
+.color-palette {
+	display: flex;
+	border: 5px solid #333333;
+	box-shadow: 0 0 5px #333333;
+	width: 150px;
+	margin: 10px;
+
+	&.color-palette__selected {
+		border-color: #ff4081;
+		box-shadow: 0 0 5px #ff4081;
+	}
+}
+
+.color-palette_box {
+	min-width: 20px;
+	width: 100%;
+	height: 50px;
+}

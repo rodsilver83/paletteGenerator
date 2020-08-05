@@ -1,1 +1,11 @@
-<div #colorGradient></div>
+<mat-form-field class="color-gradient">
+	<mat-label>Base Color</mat-label>
+	<input
+		matInput
+		[ngxMatColorPicker]="picker"
+		[formControl]="colorCtr"
+		placeholder="Base color"
+	/>
+	<ngx-mat-color-toggle matSuffix [for]="picker"></ngx-mat-color-toggle>
+	<ngx-mat-color-picker #picker [color]="theme"></ngx-mat-color-picker>
+</mat-form-field>

@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
+import { Color } from '@angular-material-components/color-picker';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'cp-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'color-palette';
-}
+export class AppComponent {}
