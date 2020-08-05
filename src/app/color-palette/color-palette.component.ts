@@ -29,7 +29,7 @@ export class ColorPaletteComponent implements OnInit, OnChanges {
 
 	@Output() public changePalette = new EventEmitter<Palette>();
 
-	private NUM_PALETTES = 9;
+	private NUM_PALETTES = 21;
 
 	public palettes: Palette[] = [];
 	public selectedPalette = 0;

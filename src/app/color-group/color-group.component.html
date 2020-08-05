@@ -48,24 +48,20 @@
 	</div>
 	<div class="tile is-parent is-6">
 		<section class="tile is-child box">
+			<cp-page-demo [palette]="palette"></cp-page-demo>
+		</section>
+	</div>
+</div>
+
+<div class="tile is-ancestor">
+	<div class="tile is-parent">
+		<div class="tile is-child box">
 			<cp-color-palette
 				[lightColors]="lightColors"
 				[colors]="colors"
 				[contrastColors]="contrastColors"
 				(changePalette)="changePalette($event)"
 			></cp-color-palette>
-		</section>
-	</div>
-</div>
-
-<div class="tile is-ancestor">
-	<div class="tile is-parent is-6">
-		<div class="tile is-child box">
-			<cp-page-demo [palette]="palette"></cp-page-demo>
 		</div>
-	</div>
-
-	<div class="tile is-parent is-6">
-		<div class="tile is-child box"></div>
 	</div>
 </div>
